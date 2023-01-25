@@ -1,5 +1,14 @@
-#Extracting hyperlinks from pdfs
-#update version of the code from original file
+#Original code Extracting hyperlinks from pdfs
+#https://www.tutorialspoint.com/extract-hyperlinks-from-pdf-in-python
+def find_url(string):
+  #Find all the String that matches with the pattern
+  regex = r"(https?://\S+)"
+  url = re.findall(regex,string)
+  for url in url:
+     return url
+     
+
+#chatGPT update version of the code from original file
 
 import re
 
