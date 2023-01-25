@@ -1,4 +1,13 @@
-#improving on original function
+#original code for guessing date
+def guess_date(string):
+    for fmt in ["%Y/%m/%d", "%d/%m/%Y", "%d-%m-%Y", "%Y%m%d", "%d.%m.%Y","%Y/%m/%d"]:
+        try:
+            return datetime.datetime.strptime(string, fmt).date()
+        except ValueError:
+            continue
+    #raise ValueError(string)
+    
+# chatGPT improving on original function
 import dateutil.parser
 
 def guess_date(string):
